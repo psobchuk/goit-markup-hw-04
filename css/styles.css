@@ -71,7 +71,6 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  /* outline: 1px solid red; */
 }
 
 .section {
@@ -81,7 +80,7 @@ img {
 
 /* Хедер */
 .header {
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
 }
 
 .header-container {
@@ -188,7 +187,7 @@ img {
   letter-spacing: var(--ls-6);
   color: var(--light-txt-color);
 
-  padding: 8px 30px;  
+  padding: 8px 30px;
   border-radius: 4px;
   border-width: 0;
 }
@@ -222,14 +221,35 @@ img {
   margin-bottom: 50px;
 }
 
-/* Особливості */
-.features.list {
+/**
+  |============================
+  | Набір карток
+  |============================
+*/
+.cards-set {
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: var(--indent);
 }
 
-.features-list-item {
-  width: 270px;
+.cards-set-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
+/* Особливості */
+.features.list {
+  --items: 4;
+}
+
+.features-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 120px;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+  border-radius: 4px;
 }
 
 .features-item-title {
@@ -247,12 +267,23 @@ img {
   letter-spacing: var(--ls-3);
   color: var(--secondary-txt-color);
 }
+/* Секція Hero */
+.hero {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/index/hero/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /* Чим ми займаємося */
-.services.list {
-  display: flex;
-  gap: 30px;
-}
 
 /* Наша команда */
 .team.section {
@@ -260,8 +291,7 @@ img {
 }
 
 .team.list {
-  display: flex;
-  gap: 30px;
+  --items: 4;
 }
 
 .team-item {
@@ -269,14 +299,9 @@ img {
   border-radius: 0 0 4px 4px;
 }
 
-/* .team-img {
-  margin-bottom: 30px;
-} */
-
 .team-item-block {
   padding: 30px;
 }
-
 
 .team-item-title {
   font-weight: 500;
@@ -369,7 +394,7 @@ img {
   color: var(--main-txt-color);
 
   padding: 13px 23px 11px;
- 
+
   border: 0;
   border-radius: 4px;
 }
@@ -381,25 +406,13 @@ img {
   color: var(--light-txt-color);
   cursor: pointer;
 
-  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 
-              0 1px 2px rgba(0, 0, 0, 0.08),
-              0 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08),
+    0 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Проекти */
-.projects-list {
-  /* --items: 3; */
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.project-card {
-  flex-basis: calc((100% - var(--indent) * var(--items) - 1) / var(--items));
-}
-
 .project-desc {
-  border: 1px solid #EEEEEE;
+  border: 1px solid #eeeeee;
   padding: 20px 24px;
   border-top: none;
 }
