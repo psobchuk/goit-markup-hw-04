@@ -143,13 +143,13 @@ img {
   margin-right: 50px;
 }
 
-.contacts-icon {
-  margin-right: 10px;
+.header-contacts-item:last-child {
+  margin-right: 0;
 }
 
-.contacts-icon:hover,
-.contacts-icon:focus {
-  fill: var(--accent-txt-color);
+.contacts-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .header-contacts-item > .header-contacts-item:last-child {
@@ -158,7 +158,8 @@ img {
 
 .header-link,
 .header-contacts-link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--secondary-txt-color);
