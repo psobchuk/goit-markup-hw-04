@@ -22,6 +22,7 @@
   --light-bgc: #f5f4fa;
   --accent-bgc: #2196f3;
   --accent-bgc-hover: #188ce8;
+  --social-bgc: #afb1b8;
 
   /* Сітки */
   --indent: 30px;
@@ -318,6 +319,37 @@ img {
   text-align: center;
   letter-spacing: var(--ls-3);
   color: var(--secondary-txt-color);
+  margin-bottom: 16px;
+}
+
+.social.list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-bgc);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: #ffffff;
+}
+
+.social-icon {
+  fill: var(--social-bgc);
 }
 
 /* Футер */
