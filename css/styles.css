@@ -179,6 +179,19 @@ img {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/index/hero/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .hero > div {
@@ -285,21 +298,6 @@ img {
   letter-spacing: var(--ls-3);
   color: var(--secondary-txt-color);
 }
-/* Секція Hero */
-.hero {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #c4c4c4;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/index/hero/hero.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 /* Чим ми займаємося */
 
@@ -315,6 +313,8 @@ img {
 .team-item {
   background-color: var(--main-bgc);
   border-radius: 0 0 4px 4px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 .team-item-block {
@@ -513,6 +513,11 @@ img {
 }
 
 /* Проекти */
+.project-card:hover {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.06),
+    1px 4px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
 .project-desc {
   border: 1px solid #eeeeee;
   padding: 20px 24px;
