@@ -149,20 +149,19 @@ img {
 
 .contacts-icon {
   margin-right: 10px;
-  fill: currentColor;
 }
 
 .header-contacts-item > .header-contacts-item:last-child {
   margin-right: 0;
 }
 
-.header-link,
 .header-contacts-link {
   display: flex;
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--secondary-txt-color);
+  fill: currentColor;
 }
 
 .header-link.current,
@@ -191,7 +190,6 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .hero > div {
@@ -353,11 +351,14 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+
+  fill: var(--social-bgc);
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-bgc);
+  fill: var(--main-bgc);
 }
 
 .social-link:hover .social-icon,
@@ -366,10 +367,6 @@ img {
 }
 
 /* Наші постійні клієнти */
-.social-icon,
-.client-icon {
-  fill: var(--social-bgc);
-}
 
 .client.list {
   --items: 6;
@@ -385,19 +382,15 @@ img {
   justify-content: center;
   align-items: center;
   height: 92px;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--social-brd);
   border-radius: 4px;
+  fill: var(--social-bgc);
 }
 
 .client-link:hover,
 .client-link:focus {
   fill: var(--accent-bgc);
   border-color: var(--accent-bgc);
-}
-
-.client-link:hover .client-icon,
-.client-link:focus .client-icon {
-  fill: var(--accent-bgc);
 }
 
 /* Футер */
@@ -435,6 +428,7 @@ img {
 .footer > .container {
   display: flex;
   gap: 70px;
+  align-items: baseline;
 }
 
 .dark-bg-link {
@@ -495,7 +489,7 @@ img {
   letter-spacing: var(--ls-3);
   color: var(--main-txt-color);
 
-  padding: 13px 23px 11px;
+  padding: 6px 22px;
 
   border: 0;
   border-radius: 4px;
@@ -513,7 +507,12 @@ img {
 }
 
 /* Проекти */
-.project-card:hover {
+.project-link {
+  display: block;
+  text-decoration: none;
+}
+
+.project-link:hover {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.06),
     1px 4px 6px 0 rgba(0, 0, 0, 0.16);
 }
@@ -529,6 +528,7 @@ img {
   line-height: calc(36 / 18);
   letter-spacing: var(--ls-6);
   margin-bottom: 4px;
+  color: var(--main-txt-color);
 }
 
 .project-type {
